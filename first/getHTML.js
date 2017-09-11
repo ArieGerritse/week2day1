@@ -8,7 +8,7 @@ function getHTML (requestOptions, callback) {
 
     response.setEncoding('utf8');
 
-    response.on('data', function(data){
+    response.on('start', function(data){
 
       console.log('Chunck receibed. Length: ', data.lenth);
       giantString += data.toString();
